@@ -249,6 +249,8 @@ pub enum StyleColor {
     TabActive = sys::ImGuiCol_TabActive,
     TabUnfocused = sys::ImGuiCol_TabUnfocused,
     TabUnfocusedActive = sys::ImGuiCol_TabUnfocusedActive,
+    DockingPreview = sys::ImGuiCol_DockingPreview,
+    DockingEmptyBg = sys::ImGuiCol_DockingEmptyBg,
     PlotLines = sys::ImGuiCol_PlotLines,
     PlotLinesHovered = sys::ImGuiCol_PlotLinesHovered,
     PlotHistogram = sys::ImGuiCol_PlotHistogram,
@@ -268,9 +270,6 @@ pub enum StyleColor {
     NavWindowingDimBg = sys::ImGuiCol_NavWindowingDimBg,
     /// Darken/colorize entire screen behind a modal window, when one is active
     ModalWindowDimBg = sys::ImGuiCol_ModalWindowDimBg,
-
-    DockingPreview = sys::ImGuiCol_DockingPreview,
-    DockingEmptyBg = sys::ImGuiCol_DockingEmptyBg,
 }
 
 impl StyleColor {
@@ -314,6 +313,8 @@ impl StyleColor {
         StyleColor::TabActive,
         StyleColor::TabUnfocused,
         StyleColor::TabUnfocusedActive,
+        StyleColor::DockingPreview,
+        StyleColor::DockingEmptyBg,
         StyleColor::PlotLines,
         StyleColor::PlotLinesHovered,
         StyleColor::PlotHistogram,
@@ -329,8 +330,6 @@ impl StyleColor {
         StyleColor::NavWindowingHighlight,
         StyleColor::NavWindowingDimBg,
         StyleColor::ModalWindowDimBg,
-        StyleColor::DockingPreview,
-        StyleColor::DockingEmptyBg,
     ];
     /// Total count of `StyleColor` variants
     pub const COUNT: usize = sys::ImGuiCol_COUNT as usize;
