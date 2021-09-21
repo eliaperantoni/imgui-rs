@@ -268,6 +268,9 @@ pub enum StyleColor {
     NavWindowingDimBg = sys::ImGuiCol_NavWindowingDimBg,
     /// Darken/colorize entire screen behind a modal window, when one is active
     ModalWindowDimBg = sys::ImGuiCol_ModalWindowDimBg,
+
+    DockingPreview = sys::ImGuiCol_DockingPreview,
+    DockingEmptyBg = sys::ImGuiCol_DockingEmptyBg,
 }
 
 impl StyleColor {
@@ -326,6 +329,8 @@ impl StyleColor {
         StyleColor::NavWindowingHighlight,
         StyleColor::NavWindowingDimBg,
         StyleColor::ModalWindowDimBg,
+        StyleColor::DockingPreview,
+        StyleColor::DockingEmptyBg,
     ];
     /// Total count of `StyleColor` variants
     pub const COUNT: usize = sys::ImGuiCol_COUNT as usize;

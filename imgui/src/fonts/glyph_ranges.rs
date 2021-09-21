@@ -143,7 +143,7 @@ impl FontGlyphRanges {
     /// It is up to the caller to guarantee the pointer is not null, remains valid forever, and
     /// points to valid data.
     pub unsafe fn from_ptr(ptr: *const u32) -> FontGlyphRanges {
-        FontGlyphRanges(FontGlyphRangeData::Custom(ptr))
+        FontGlyphRanges(FontGlyphRangeData::Custom(ptr as _))
     }
 
     pub(crate) unsafe fn to_ptr(&self, atlas: *mut sys::ImFontAtlas) -> *const sys::ImWchar {
